@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:watch": "jest --watch --onlyChanged"
   },
   "dependencies": {
     "@types/node": "18.14.1",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
+    "@babel/preset-typescript": "^7.21.0",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -34,12 +37,17 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.11",
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
   }

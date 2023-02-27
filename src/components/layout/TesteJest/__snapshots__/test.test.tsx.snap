@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TesteJest /> should render the heading 1`] = `
+<main>
+  <h2>
+    React
+  </h2>
+</main>
+`;
