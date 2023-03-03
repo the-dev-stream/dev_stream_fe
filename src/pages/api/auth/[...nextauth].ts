@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import NextAuth, { DefaultSession, TokenSet } from 'next-auth';
 import LinkedInProvider from 'next-auth/providers/linkedin';
+import GoogleProvider from 'next-auth/providers/google';
+import GitHubProvider from 'next-auth/providers/github';
 
 interface User {
   session: DefaultSession,
@@ -11,7 +13,15 @@ export const authOptions = {
   providers: [
     LinkedInProvider({
       clientId: process.env.NEXT_PUBLIC_LINKEDIN_CLIENT_ID!,
-      clientSecret: process.env.NEXT_PUBLIC_LINKEDIN_CLIENT_SECRET!,
+      clientSecret: process.env.NEXT_PUBLIC_LINKEDIN_CLIENT_SECRET!
+    }),
+    GoogleProvider({
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET!
+    }),
+    GitHubProvider({
+      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!,
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET!
     })
   ],
   baseUrl: process.env.NEXTAUTH_URL,
@@ -28,7 +38,7 @@ export const authOptions = {
       try {
         return true;
       } catch (erro) {
-        console.log('DEU ERRO', erro);
+        console.log('Falha na autenticação:', erro);
         return false;
       }
     },
