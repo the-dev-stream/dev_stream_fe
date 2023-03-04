@@ -2,30 +2,15 @@
 @tailwind utilities;
 @tailwind components;
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-@media (max-width: 1080px) {
-  html {
-    font-size: 93.75%;
-  }
-}
-
-@media (max-width: 720px) {
-  html {
-    font-size: 87.5%;
-  }
-}
-
-body,
-input,
-select,
-textarea,
-button {
-  font: 400 1rem sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 button {
