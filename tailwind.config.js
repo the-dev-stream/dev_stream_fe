@@ -3,7 +3,7 @@ module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      'sans': ['Roboto', 'sans-serif'],
     },
     colors: {
       transparent: 'transparent',
